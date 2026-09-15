@@ -26,7 +26,7 @@ ARG HELM_VERSION
 ARG SCOUT_VERSION
 ARG DATABRICKS_CLI_VERSION
 
-LABEL org.opencontainers.image.source="https://github.com/kimbeejay/cloud-ops-builder"
+LABEL org.opencontainers.image.source="https://github.com/TaeHyungKim90/cloud-ops-builder"
 LABEL org.opencontainers.image.title="Cloud Ops Builder"
 LABEL org.opencontainers.image.description="A tool to build and deploy cloud operations tools."
 LABEL org.opencontainers.image.licenses="Apache-2.0"
@@ -36,7 +36,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN echo "Building for architecture: ${TARGETARCH}"
 
 # 1. Install essential system tools
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     unzip \

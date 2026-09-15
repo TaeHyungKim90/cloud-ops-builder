@@ -1,2 +1,5 @@
 .idea/
 .env
+out/
+docker/buildkit/certs/*.crt
+docker/buildkit/certs/*.pem

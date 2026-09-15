@@ -1,0 +1,3 @@
+# 사내/Zscaler CA (setup-builder.sh 가 WSL에서 복사). git 커밋 금지.
+*
+!.gitignore
